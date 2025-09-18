@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Préflight (ancien base)
+@import "tailwindcss/preflight"; */
+
+
+/* Optionnel : styles globaux */
+html.dark {
+  color-scheme: dark; /* indique que le navigateur doit utiliser le mode sombre */
+}
+
+
+
