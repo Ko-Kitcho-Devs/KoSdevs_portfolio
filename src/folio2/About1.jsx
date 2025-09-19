@@ -27,7 +27,7 @@ export default function About() {
                     className="bg-gray-800 rounded-2xl p-8 mb-16 border border-gray-700 shadow-xl"
                 >
                     <p className="text-gray-300 text-lg md:text-xl text-center leading-relaxed">
-                        Je suis un développeur web et mobile passionné, spécialisé dans la création
+                        Je suis un développeur web FullStack passionné, spécialisé dans la création
                         d'applications modernes, performantes et intuitives. Avec une solide base en
                         <span className="text-teal-400 font-semibold"> React & Laravel</span>,
                         j'aime transformer des idées en projets concrets qui apportent de la valeur.
@@ -55,7 +55,7 @@ export default function About() {
                                 <span className="text-teal-400 font-semibold">2024</span>
                                 <h3 className="text-xl font-bold text-gray-100 mt-1">Licence en Systèmes informatiques et logiciels</h3>
                                 <p className="text-gray-400 mt-2">ESM-Bénin</p>
-                                <p className="text-teal-600 mt-3 font-bold">Acquisition des fondamentaux en développement logiciel, algorithmique et architecture des systèmes.</p>
+                                <p className="text-teal-500 mt-3 font-bold">Acquisition des fondamentaux en développement logiciel, algorithmique et architecture des systèmes.</p>
                             </div>
                         </motion.div>
 
@@ -71,7 +71,7 @@ export default function About() {
                                 <span className="text-teal-400 font-semibold">2025</span>
                                 <h3 className="text-xl font-bold text-gray-100 mt-1">Stage professionnel en Développement Web FullStack</h3>
                                 <p className="text-gray-400 mt-2">FIFACOM</p>
-                                <p className="text-teal-600 mt-3 font-bold">Développement d'applications web complètes avec React.js et Laravel. Intégration d'API et optimisation des performances.</p>
+                                <p className="text-teal-500 mt-3 font-bold">Développement d'applications web complètes avec React.js et Laravel. Intégration d'API et optimisation des performances.</p>
                             </div>
                         </motion.div>
 
@@ -87,7 +87,7 @@ export default function About() {
                                 <span className="text-teal-400 font-semibold">2025 - Présent</span>
                                 <h3 className="text-xl font-bold text-gray-100 mt-1">Développeur Freelance</h3>
                                 <p className="text-gray-400 mt-2">Projets pour divers clients</p>
-                                <p className="text-teal-600 mt-3 font-bold">Création d'applications sur mesure, sites vitrines et e-commerce. Collaboration avec des clients internationaux pour des solutions digitales innovantes.</p>
+                                <p className="text-teal-500 mt-3 font-bold">Création d'applications sur mesure, sites vitrines et e-commerce. Collaboration avec des clients internationaux pour des solutions digitales innovantes.</p>
                             </div>
                         </motion.div>
                     </div>

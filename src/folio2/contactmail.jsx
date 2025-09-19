@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaWhatsapp, FaTelegram, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
 import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +12,9 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
 
   // Remplacez ces valeurs par vos identifiants EmailJS
-  const SERVICE_ID = "votre_service_id";
-  const TEMPLATE_ID = "votre_template_id";
-  const PUBLIC_KEY = "votre_public_key";
+  const SERVICE_ID = "service_gj5rpxl";
+  const TEMPLATE_ID = "template_b1d4io5";
+  const PUBLIC_KEY = "I_m-qOeiaND7XPzLS";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,7 +29,7 @@ export default function Contact() {
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
-      to_name: "Votre Nom", // Votre nom ou celui du destinataire
+      to_name: "Ko'Sdevs", // Votre nom ou celui du destinataire
       message: formData.message,
       reply_to: formData.email
     };
@@ -68,6 +70,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-gray-400 text-center max-w-2xl mx-auto mb-16 text-lg"
         >
+          Vous avez un projet ou une opportunité ? N’hésitez pas à me contacter.
           Discutons de votre projet et voyons comment je peux vous aider à le concrétiser
         </motion.p>
 
@@ -80,7 +83,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Mes coordonnées</h3>
+            <h3 className="text-2xl font-bold text-gray-100 mb-6">Mes <span className="text-teal-300">coordonnées</span></h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -126,13 +129,15 @@ export default function Contact() {
 
             {/* Réseaux sociaux */}
             <div className="pt-6">
-              <h4 className="text-gray-100 font-semibold mb-4">Suivez-moi sur</h4>
+              <h4 className="text-gray-100 font-semibold mb-4">Suivez-<span className="text-teal-300">moi</span> sur</h4>
               <div className="flex space-x-4">
                 {[
-                  { icon: <FaLinkedin className="text-xl" />, url: "#", color: "hover:text-blue-400" },
-                  { icon: <FaGithub className="text-xl" />, url: "#", color: "hover:text-gray-300" },
-                  { icon: <FaTelegram className="text-xl" />, url: "#", color: "hover:text-blue-500" },
+                  { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/in/dieu-donn%C3%A9-kitcho-b5672b279/", color: "hover:text-blue-500" },
+                  { icon: <FaGithub className="text-xl" />, url: "https://github.com/Ko-Kitcho-Devs", color: "hover:text-gray-100" },
+                  { icon: <FaTelegram className="text-xl" />, url: "https://t.me/Kokitcho", color: "hover:text-blue-500" },
                   { icon: <FaGlobe className="text-xl" />, url: "#", color: "hover:text-teal-400" },
+                  { icon: <FaWhatsapp className="text-xl" />, url: "https://wa.me/+22996321870", color: "hover:text-green-500",},
+                  { icon: <RiTwitterXLine />, url: "https://x.com/KoKitcho", name: "Twitter", color: "hover:text-gray-100" },
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -169,7 +174,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
-                  placeholder="Votre nom"
+                  placeholder="Votre nom complet"
                 />
               </div>
               

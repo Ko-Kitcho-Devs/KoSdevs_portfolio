@@ -57,7 +57,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Mes coordonnées</h3>
+            <h3 className="text-2xl font-bold text-gray-100 mb-6 space-x-3">Mes <span className="text-teal-400">coordonnées</span></h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -103,7 +103,7 @@ export default function Contact() {
 
             {/* Réseaux sociaux */}
             <div className="pt-6">
-              <h4 className="text-gray-100 font-semibold mb-4">Suivez-moi sur</h4>
+              <h4 className="text-gray-100 font-semibold mb-4">Suivez- <span className="text-teal-400" >moi</span> sur</h4>
               <div className="flex space-x-4">
                 {[
                   { icon: <FaLinkedin className="text-xl" />, url: "#", color: "hover:text-blue-400" },

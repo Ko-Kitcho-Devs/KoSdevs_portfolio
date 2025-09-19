@@ -16,10 +16,10 @@ export default function Navbar({ onOpenQuote }) {
         <motion.h1 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-bold text-teal-400 flex items-center"
+          className="text-2xl font-bold text-gray-100 flex items-center"
         >
           <span className="bg-teal-400 text-gray-900 p-1 rounded mr-2">UnV</span>
-          Ko'S devs
+          Ko'S<span className="text-teal-300">devs</span>
         </motion.h1>
 
         {/* Desktop Menu */}
@@ -74,7 +74,7 @@ export default function Navbar({ onOpenQuote }) {
           {['Accueil', 'À propos', 'Compétences', 'Projets', 'Contact'].map((item) => (
             <li key={item}>
               <a 
-                href={`#${item.toLowerCase().replace(' ', '-')}`} 
+                href={`#${item.toLowerCase().replace(' ', '_')}`} 
                 className="text-gray-300 font-medium px-4 py-2 rounded-lg hover:bg-gray-700 hover:text-teal-400 transition-colors duration-300"
                 onClick={toggleMenu}
               >

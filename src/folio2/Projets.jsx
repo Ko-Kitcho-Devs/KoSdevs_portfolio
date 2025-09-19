@@ -20,11 +20,11 @@ import tetch_entrepriseImg from "/images/tetch_entreprise.png";
 // );
 
 const ProjectPlaceholder = ({ className, image, title, imgClass }) => (
-  <div className={`flex items-center justify-center ${className}`}>
+  <div className={"flex items-center justify-center" + {className}}>
     <img
       src={image}
       alt={title}
-      className={`w-full h-auto max-w-full ${imgClass}`} // Modification importante ici
+      className={"w-full h-auto max-w-full" + {imgClass}} // Modification importante ici
     />
   </div>
 );
@@ -45,8 +45,8 @@ const projects = [
     description: "Template moderne conçu à partir d'une maquette Figma, implémenté avec HTML et Tailwind CSS. Design épuré et professionnel pour une institution financière.",
     longDescription: "Interface utilisateur intuitive pour une plateforme financière avec mise en page responsive, composants interactifs et palette de couleurs professionnelle. Intégration parfaite de la maquette Figma en code fonctionnel.",
     image: GlobalfinnanceImg,
-    link: "#",
-    github: "#",
+    link: "https://github.com/Ko-Kitcho-Devs/mini-projet-front-end.git",
+    github: "https://github.com/Ko-Kitcho-Devs/mini-projet-front-end.git",
     technologies: ["HTML5", "Tailwind CSS", "JavaScript", "Figma"],
     category: "Web Design"
   },
@@ -55,8 +55,8 @@ const projects = [
     description: "Page d'accueil élégante avec formulaire de connexion, réalisée avec HTML et CSS. Design minimaliste et fonctionnel pour une plateforme éducative.",
     longDescription: "Interface d'accueil conviviale avec formulaire de connexion stylisé, animations subtiles et design responsive. Focus sur l'expérience utilisateur et l'accessibilité.",
     image: tetch_entrepriseImg,
-    link: "#",
-    github: "#",
+    link: "https://github.com/Ko-Kitcho-Devs/koSteach.git",
+    github: "https://github.com/Ko-Kitcho-Devs/koSteach.git",
     technologies: ["HTML5", "CSS3", "UI/UX Design"],
     category: "Web Design"
   },
@@ -65,8 +65,8 @@ const projects = [
     description: "Template de plateforme de location de voitures, conçu avec HTML et CSS. Interface utilisateur intuitive pour la recherche et réservation de véhicules.",
     longDescription: "Plateforme complète de location de véhicules avec système de filtres, galerie de voitures, et processus de réservation simplifié. Design moderne axé sur la conversion.",
     image: kitch_locImg,
-    link: "#",
-    github: "#",
+    link: "https://github.com/Ko-Kitcho-Devs/kitch_loc.git",
+    github: "https://github.com/Ko-Kitcho-Devs/kitch_loc.git",
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     category: "Web Development"
   }
