@@ -5,6 +5,8 @@ import digitalSoftinnovationImg from "/images/digitalSoftinnovation.png";
 import GlobalfinnanceImg from "/images/Globalfinnance.png";
 import kitch_locImg from "/images/kitch_loc.png";
 import tetch_entrepriseImg from "/images/tetch_entreprise.png";
+import greeoImg from "/images/greeo.png";
+
 
 // Images de remplacement (à remplacer par vos propres images)
 // const ProjectPlaceholder = ({ className, image, title }) => (
@@ -38,6 +40,16 @@ const projects = [
     link: "https://digitalsoftinnovation.com/",
     github: "#",
     technologies: ["Laravel", "HTML5", "CSS3", "Bootstrap", "JavaScript", "MySQL"],
+    category: "Web Development"
+  },
+  {
+    title: "Greeo",
+    description: "Plateforme web de réservation de salles évènementielles, intégrant un système de paiement sécurisé en ligne via Fedapay. Réalisé avec Laravel, HTML, TailwindCSS,  et JavaScript. Design responsive et moderne avec administration complète.",
+    longDescription: "Une plateforme permettant aux utilisateurs de consulter les détails sur les différentes salles disponibles et de procéder facilement à la réservation via un système de paiement sécurisé en ligne via Fedapay",
+    image: greeoImg,
+    link: "",
+    github: "#",
+    technologies: ["Laravel", "HTML5", "TailwindCss", "JavaScript", "MySQL"],
     category: "Web Development"
   },
   {
@@ -83,16 +95,16 @@ export default function Projects() {
     : projects.filter(project => project.category === filter);
 
   return (
-    <section id="projets" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section id="projets" className="py-20 bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 light:from-gray-300 light:via-gray-50 light:to-gray-300">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4"
+          className="text-4xl md:text-5xl font-bold text-center dark:text-gray-100 light:text-gray-400 mb-4"
         >
-          Mes <span className="text-teal-400">projets</span>
+          Mes <span className="dark:text-teal-400 light:text-blue-600">projets</span>
         </motion.h2>
         
         <motion.p
@@ -100,7 +112,7 @@ export default function Projects() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg"
+          className="dark:text-gray-400 light:text-gray-600 font-bold text-center max-w-2xl mx-auto mb-12 text-lg"
         >
           Une sélection de mes réalisations récentes, allant du développement web au design d'interfaces.
         </motion.p>
@@ -119,8 +131,8 @@ export default function Projects() {
               onClick={() => setFilter(category)}
               className={`px-5 py-2 rounded-full font-medium transition-all ${
                 filter === category
-                  ? "bg-teal-500 text-gray-900"
-                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  ? "dark:bg-teal-500 light:bg-blue-700 dark:text-gray-900 light:text-gray-100"
+                  : "dark:bg-gray-700 light:bg-gray-400 dark:text-gray-300 light:text-gray-700 dark:hover:bg-gray-600 light:hover:bg-gray-100"
               }`}
             >
               {category}
@@ -138,7 +150,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              className="dark:bg-gray-800 light:bg-gray-400 rounded-2xl overflow-hidden border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               <div className="h-48 overflow-hidden">
@@ -146,21 +158,21 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-bold text-gray-100">{project.title}</h3>
-                  <span className="text-xs bg-gray-700 text-teal-400 px-2 py-1 rounded-full">
+                  <h3 className="text-xl font-bold dark:text-gray-100 light:text-gray-200">{project.title}</h3>
+                  <span className="text-xs dark:bg-gray-700 light:bg-gray-300 dark:text-teal-400 font-bold light:text-blue-600 px-2 py-1 rounded-full">
                     {project.category}
                   </span>
                 </div>
-                <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                <p className="dark:text-gray-400 light:text-gray-900 font-bold mb-4 text-sm">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.slice(0, 3).map((tech, i) => (
-                    <span key={i} className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">
+                    <span key={i} className="text-xs dark:bg-gray-700 light:bg-gray-300 dark:text-gray-300 light:text-blue-500 font-bold px-2 py-1 rounded">
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">
+                    <span className="text-xs dark:bg-gray-700 light:bg-gray-300 dark:text-gray-300 light:text-blue-500 font-bold px-2 py-1 rounded">
                       +{project.technologies.length - 3}
                     </span>
                   )}
@@ -172,7 +184,7 @@ export default function Projects() {
                       e.stopPropagation();
                       setSelectedProject(project);
                     }}
-                    className="px-4 py-2 bg-teal-600 text-gray-100 rounded-lg hover:bg-teal-500 transition font-medium text-sm"
+                    className="px-4 py-2 dark:bg-teal-600 light:bg-blue-500 text-gray-100 rounded-lg dark:hover:bg-teal-500 light:hover:bg-blue-700 transition font-medium text-sm"
                   >
                     Voir les détails
                   </button>
@@ -182,7 +194,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="text-gray-400 hover:text-teal-400 transition"
+                      className="dark:text-gray-400 light:text-gray-900 dark:hover:text-teal-400 light:hover:text-blue-500 transition"
                       title="Code source"
                     >
                       <FaGithub className="text-lg" />
@@ -192,7 +204,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="text-gray-400 hover:text-teal-400 transition"
+                      className="dark:text-gray-400 light:text-gray-900 dark:hover:text-teal-400 light:hover:text-blue-500 transition"
                       title="Voir le projet"
                     >
                       <FaExternalLinkAlt className="text-lg" />
@@ -210,17 +222,17 @@ export default function Projects() {
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 dark:bg-black bg-gradient-to-br light:from-gray-300 light:via-gray-50 light:to-gray-300 bg-opacity-80 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedProject(null)}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-gray-800 rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-gray-700"
+            className="dark:bg-gray-800 light:bg-gray-400 rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-4 right-4 text-gray-400 hover:text-teal-400 text-xl transition"
+              className="absolute top-4 right-4 dark:text-gray-300 light:text-gray-700 dark:hover:text-teal-400 light:hover:text-blue-500 text-3xl transition"
               onClick={() => setSelectedProject(null)}
             >
               <FaTimes />
@@ -230,18 +242,18 @@ export default function Projects() {
               <ProjectPlaceholder className="w-full h-full" image={selectedProject.image} title={selectedProject.title} />
             </div>
             
-            <h3 className="text-2xl font-bold text-gray-100 mb-2">{selectedProject.title}</h3>
-            <span className="inline-block bg-gray-700 text-teal-400 text-sm px-3 py-1 rounded-full mb-4">
+            <h3 className="text-2xl font-bold dark:text-gray-100 light:text-gray-200 mb-2">{selectedProject.title}</h3>
+            <span className="inline-block dark:bg-gray-700 light:bg-gray-300 dark:text-teal-400 light:text-blue-600 font-bold text-sm px-3 py-1 rounded-full mb-4">
               {selectedProject.category}
             </span>
             
-            <p className="text-gray-300 mb-6">{selectedProject.longDescription}</p>
+            <p className="dark:text-gray-300 light:text-gray-800 font-bold mb-6">{selectedProject.longDescription}</p>
             
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-100 mb-3">Technologies utilisées</h4>
+              <h4 className="text-lg font-bold dark:text-gray-100 light:text-blue-500 mb-3">Technologies utilisées</h4>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.technologies.map((tech, index) => (
-                  <span key={index} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
+                  <span key={index} className="dark:bg-gray-700 light:bg-gray-300 dark:text-teal-400 light:text-blue-600 font-bold px-3 py-1 rounded-full text-sm">
                     {tech}
                   </span>
                 ))}
@@ -253,7 +265,7 @@ export default function Projects() {
                 href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-4 py-2 bg-teal-600 text-gray-100 rounded-lg hover:bg-teal-500 transition font-medium"
+                className="flex items-center px-4 py-2 dark:bg-teal-600 light:bg-blue-500 text-gray-100 rounded-lg hover:bg-teal-500 transition font-medium"
               >
                 <FaExternalLinkAlt className="mr-2" /> Voir le projet
               </a>
@@ -261,7 +273,7 @@ export default function Projects() {
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition font-medium"
+                className="flex items-center px-4 py-2 dark:bg-gray-700 light:bg-gray-300 dark:text-gray-400 light:text-gray-800 font-bold rounded-lg hover:bg-gray-600 transition font-medium"
               >
                 <FaGithub className="mr-2" /> Code source
               </a>

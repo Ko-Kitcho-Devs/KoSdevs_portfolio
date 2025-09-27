@@ -51,16 +51,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section id="contact" className="py-20 bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 light:from-gray-300 light:via-gray-50 light:to-gray-300 ">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4"
+          className="text-4xl md:text-5xl font-bold text-center dark:text-gray-100 light:text-gray-400 mb-4"
         >
-          Contactez-<span className="text-teal-400">moi</span>
+          Contactez-<span className="dark:text-teal-400 light:text-blue-600">moi</span>
         </motion.h2>
         
         <motion.p
@@ -68,7 +68,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-gray-400 text-center max-w-2xl mx-auto mb-16 text-lg"
+          className="dark:text-gray-400 light:text-gray-800 font-bold text-center max-w-2xl mx-auto mb-16 text-lg"
         >
           Vous avez un projet ou une opportunité ? N’hésitez pas à me contacter.
           Discutons de votre projet et voyons comment je peux vous aider à le concrétiser
@@ -83,53 +83,53 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Mes <span className="text-teal-300">coordonnées</span></h3>
+            <h3 className="text-2xl font-bold dark:text-gray-100 light:text-gray-500 mb-6">Mes <span className="dark:text-teal-300 light:text-blue-600">coordonnées</span></h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="bg-teal-500 p-3 rounded-full mr-4">
+                <div className="dark:bg-teal-500 light:bg-blue-500 p-3 rounded-full mr-4">
                   <FaMapMarkerAlt className="text-white text-lg" />
                 </div>
                 <div>
-                  <h4 className="text-gray-100 font-semibold">Localisation</h4>
-                  <p className="text-gray-400">Cotonou, Bénin</p>
+                  <h4 className="dark:text-gray-100 light:text-gray-500 font-bold">Localisation</h4>
+                  <p className="dark:text-gray-400 light:text-gray-800 font-bold">Cotonou, Bénin</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="bg-teal-500 p-3 rounded-full mr-4">
+                <div className="dark:bg-teal-500 light:bg-blue-500 p-3 rounded-full mr-4">
                   <FaPhone className="text-white text-lg" />
                 </div>
                 <div>
-                  <h4 className="text-gray-100 font-semibold">Téléphone</h4>
-                  <p className="text-gray-400">+229 01 96 32 18 70</p>
+                  <h4 className="dark:text-gray-100 light:text-gray-500 font-bold">Téléphone</h4>
+                  <p className="dark:text-gray-400 light:text-gray-800 font-bold">+229 01 96 32 18 70</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="bg-teal-500 p-3 rounded-full mr-4">
+                <div className="dark:bg-teal-500 light:bg-blue-500 p-3 rounded-full mr-4">
                   <FaEnvelope className="text-white text-lg" />
                 </div>
                 <div>
-                  <h4 className="text-gray-100 font-semibold">Email</h4>
-                  <p className="text-gray-400">kono1872002@gmail.com</p>
+                  <h4 className="dark:text-gray-100 light:text-gray-500 font-bold">Email</h4>
+                  <p className="dark:text-gray-400 light:text-gray-800 font-bold">kono1872002@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="bg-teal-500 p-3 rounded-full mr-4">
+                <div className="dark:bg-teal-500 light:bg-blue-500 p-3 rounded-full mr-4">
                   <FaWhatsapp className="text-white text-lg" />
                 </div>
                 <div>
-                  <h4 className="text-gray-100 font-semibold">WhatsApp</h4>
-                  <p className="text-gray-400">+229 01 96 32 18 70</p>
+                  <h4 className="dark:text-gray-100 light:text-gray-500 font-bold">WhatsApp</h4>
+                  <p className="dark:text-gray-400 light:text-gray-800 font-bold">+229 01 96 32 18 70</p>
                 </div>
               </div>
             </div>
 
             {/* Réseaux sociaux */}
             <div className="pt-6">
-              <h4 className="text-gray-100 font-semibold mb-4">Suivez-<span className="text-teal-300">moi</span> sur</h4>
+              <h4 className="dark:text-gray-100 light:text-gray-500 font-bold mb-4">Suivez-<span className="dark:text-teal-300 light:text-blue-600">moi</span> sur</h4>
               <div className="flex space-x-4">
                 {[
                   { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/in/dieu-donn%C3%A9-kitcho-b5672b279/", color: "hover:text-blue-500" },
@@ -144,7 +144,7 @@ export default function Contact() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`bg-gray-700 text-gray-400 p-3 rounded-full transition-all duration-300 ${social.color}`}
+                    className={`dark:bg-gray-700 light:bg-gray-400 dark:text-gray-400 light:text-gray-50 p-3 rounded-full transition-all duration-300 ${social.color}`}
                   >
                     {social.icon}
                   </a>
@@ -159,13 +159,13 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-xl"
+            className="dark:bg-gray-800 light:bg-gray-400 p-8 rounded-2xl border border-gray-700 shadow-xl"
           >
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Envoyez un message</h3>
+            <h3 className="text-2xl font-bold dark:text-gray-100 light:text-gray-800 mb-6">Envoyez un message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2">Nom complet</label>
+                <label htmlFor="name" className="block font-bold text-gray-100 mb-2">Nom complet</label>
                 <input
                   type="text"
                   id="name"
@@ -173,13 +173,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500 light:focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   placeholder="Votre nom complet"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">Adresse email</label>
+                <label htmlFor="email" className="block font-bold text-gray-100 mb-2">Adresse email</label>
                 <input
                   type="email"
                   id="email"
@@ -187,13 +187,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500 light:focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   placeholder="votre@email.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+                <label htmlFor="message" className="block font-bold text-gray-100 mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -201,7 +201,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500 light:focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   placeholder="Décrivez votre projet ou demande..."
                 ></textarea>
               </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
                 className={`w-full py-3.5 rounded-lg text-gray-100 font-semibold transition-all duration-300 ${
-                  loading ? "bg-teal-800 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-500"
+                  loading ? "dark:bg-teal-800 light:bg-blue-800 cursor-not-allowed" : "dark:bg-teal-600 light:bg-blue-500 dark:hover:bg-teal-500 light:hover:bg-blue-700"
                 }`}
               >
                 {loading ? (

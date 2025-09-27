@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section
             id="à_propos"
-            className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6"
+            className="h-full flex flex-col justify-center items-center bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 light:from-gray-300 light:via-gray-50 light:to-gray-300 py-20 px-6"
         >
             <div className="max-w-6xl mx-auto">
                 {/* titre */}
@@ -13,9 +13,9 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-12"
+                    className="text-4xl md:text-5xl font-bold text-center dark:text-gray-100 light:text-gray-600 mb-12"
                 >
-                    À propos de <span className="text-teal-400">moi</span>
+                    À propos de <span className="dark:text-teal-400 light:text-blue-700">moi</span>
                 </motion.h2>
 
                 {/* Description */}
@@ -24,23 +24,23 @@ export default function About() {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.7 }}
                     viewport={{ once: true }}
-                    className="bg-gray-800 rounded-2xl p-8 mb-16 border border-gray-700 shadow-xl"
+                    className="dark:bg-gray-800 light:bg-gray-400 rounded-2xl p-8 mb-16 border border-gray-700 shadow-xl"
                 >
-                    <p className="text-gray-300 text-lg md:text-xl text-center leading-relaxed">
+                    <p className="dark:text-gray-300  font-bold light:text-gray-900 text-lg md:text-xl text-center leading-relaxed">
                         Je suis un développeur web FullStack passionné, spécialisé dans la création
                         d'applications modernes, performantes et intuitives. Avec une solide base en
-                        <span className="text-teal-400 font-semibold"> React & Laravel</span>,
+                        <span className="dark:text-teal-400 light:text-blue-600 font-semibold"> React & Laravel</span>,
                         j'aime transformer des idées en projets concrets qui apportent de la valeur.
                     </p>
                 </motion.div>
 
                 {/* Timeline */}
                 <div className="max-w-3xl w-full mx-auto">
-                    <h3 className="text-2xl font-bold text-gray-100 mb-8 text-center">Mon <span className="text-teal-400">parcours</span></h3>
+                    <h3 className="text-2xl font-bold dark:text-gray-100 light:text-gray-500 mb-8 text-center">Mon <span className="dark:text-teal-400 light:text-blue-600">parcours</span></h3>
                     
                     <div className="relative">
                         {/* Ligne de timeline */}
-                        <div className="absolute left-4 h-full w-1 bg-teal-500 opacity-30 -translate-x-1/2"></div>
+                        <div className="absolute left-4 h-full w-1 dark:bg-teal-500 light:bg-blue-700 opacity-30 -translate-x-1/2"></div>
                         
                         {/* Élément de timeline */}
                         <motion.div
@@ -50,12 +50,12 @@ export default function About() {
                             viewport={{ once: true }}
                             className="mb-12 pl-12 relative"
                         >
-                            <div className="absolute w-4 h-4 bg-teal-500 rounded-full -left-2 top-2 border-4 border-gray-900 z-10"></div>
-                            <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-lg">
-                                <span className="text-teal-400 font-semibold">2024</span>
-                                <h3 className="text-xl font-bold text-gray-100 mt-1">Licence en Systèmes informatiques et logiciels</h3>
-                                <p className="text-gray-400 mt-2">ESM-Bénin</p>
-                                <p className="text-teal-500 mt-3 font-bold">Acquisition des fondamentaux en développement logiciel, algorithmique et architecture des systèmes.</p>
+                            <div className="absolute w-4 h-4 dark:bg-teal-500 light:bg-blue-700 rounded-full -left-2 top-2 border-4 border-gray-200 z-10"></div>
+                            <div className="dark:bg-gray-800 light:bg-gray-400 p-6 rounded-2xl border border-gray-700 shadow-lg">
+                                <span className="dark:text-teal-400 light:text-blue-600 font-bold">2024</span>
+                                <h3 className="text-xl font-bold dark:text-gray-100 light:text-gray-900 mt-1">Licence en Systèmes informatiques et logiciels</h3>
+                                <p className="dark:text-gray-400 font-bold light:text-gray-600 mt-2">ESM-Bénin</p>
+                                <p className="dark:text-teal-400 light:text-blue-800 mt-3 font-bold">Acquisition des fondamentaux en développement logiciel, algorithmique et architecture des systèmes.</p>
                             </div>
                         </motion.div>
 
@@ -66,12 +66,12 @@ export default function About() {
                             viewport={{ once: true }}
                             className="mb-12 pl-12 relative"
                         >
-                            <div className="absolute w-4 h-4 bg-teal-500 rounded-full -left-2 top-2 border-4 border-gray-900 z-10"></div>
-                            <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-lg">
-                                <span className="text-teal-400 font-semibold">2025</span>
-                                <h3 className="text-xl font-bold text-gray-100 mt-1">Stage professionnel en Développement Web FullStack</h3>
-                                <p className="text-gray-400 mt-2">FIFACOM</p>
-                                <p className="text-teal-500 mt-3 font-bold">Développement d'applications web complètes avec React.js et Laravel. Intégration d'API et optimisation des performances.</p>
+                            <div className="absolute w-4 h-4 dark:bg-teal-500 light:bg-blue-700 rounded-full -left-2 top-2 border-4 border-gray-200 z-10"></div>
+                            <div className="dark:bg-gray-800 light:bg-gray-400 p-6 rounded-2xl border border-gray-700 shadow-lg">
+                                <span className="dark:text-teal-400 light:text-blue-600 font-bold">2025</span>
+                                <h3 className="text-xl font-bold dark:text-gray-100 light:text-gray-900 mt-1">Stage professionnel en Développement Web FullStack</h3>
+                                <p className="dark:text-gray-400 font-bold light:text-gray-600 mt-2">FIFACOM</p>
+                                <p className="dark:text-teal-400 light:text-blue-800 mt-3 font-bold">Développement d'applications web complètes avec React.js et Laravel. Intégration d'API et optimisation des performances.</p>
                             </div>
                         </motion.div>
 
@@ -82,12 +82,12 @@ export default function About() {
                             viewport={{ once: true }}
                             className="pl-12 relative"
                         >
-                            <div className="absolute w-4 h-4 bg-teal-500 rounded-full -left-2 top-2 border-4 border-gray-900 z-10"></div>
-                            <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-lg">
-                                <span className="text-teal-400 font-semibold">2025 - Présent</span>
-                                <h3 className="text-xl font-bold text-gray-100 mt-1">Développeur Freelance</h3>
-                                <p className="text-gray-400 mt-2">Projets pour divers clients</p>
-                                <p className="text-teal-500 mt-3 font-bold">Création d'applications sur mesure, sites vitrines et e-commerce. Collaboration avec des clients internationaux pour des solutions digitales innovantes.</p>
+                            <div className="absolute w-4 h-4 dark:bg-teal-500 light:bg-blue-700 rounded-full -left-2 top-2 border-4 border-gray-200 z-10"></div>
+                            <div className="dark:bg-gray-800 light:bg-gray-400 p-6 rounded-2xl border border-gray-700 shadow-lg">
+                                <span className="dark:text-teal-400 light:text-blue-600 font-bold">2025 - Présent</span>
+                                <h3 className="text-xl font-bold dark:text-gray-100 light:text-gray-900 mt-1">Développeur Freelance</h3>
+                                <p className="dark:text-gray-400 font-bold light:text-gray-600 mt-2">Projets pour divers clients</p>
+                                <p className="dark:text-teal-400 light:text-blue-800 mt-3 font-bold">Création d'applications sur mesure, sites vitrines et e-commerce. Collaboration avec des clients internationaux pour des solutions digitales innovantes.</p>
                             </div>
                         </motion.div>
                     </div>

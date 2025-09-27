@@ -2,37 +2,37 @@ import { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [whiteMode, setWhiteMode] = useState(false);
 
   // Charger le thème depuis le localStorage au démarrage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
+    if (savedTheme === "white") {
+      setWhiteMode(true);
+      document.documentElement.classList.add("white");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("white");
     }
   }, []);
 
   const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
+    if (whiteMode) {
+      document.documentElement.classList.remove("white");
       localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.add("white");
+      localStorage.setItem("theme", "white");
     }
-    setDarkMode(!darkMode);
+    setWhiteMode(!whiteMode);
   };
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-lg hover:scale-110 transition-transform"
+      className="p-2 rounded-full bg-gray-200 white:bg-gray-100 text-gray-800 white:text-gray-7S00 shadow-lg hover:scale-110 transition-transform"
       title="Changer de thème"
     >
-      {darkMode ? <FaSun /> : <FaMoon />}
+      {whiteMode ? <FaSun /> : <FaMoon />}
     </button>
   );
 }

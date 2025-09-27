@@ -1,14 +1,20 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-/* Préflight (ancien base)
-@import "tailwindcss/preflight"; */
+@custom-variant light (&:where(.light &));
+
+@custom-variant dark (&:where(.dark &));
 
 
-/* Optionnel : styles globaux */
-html.dark {
-  color-scheme: dark; /* indique que le navigateur doit utiliser le mode sombre */
+html {
+    background-color: var(--bg-bg-dark);
+  color:var(--color-text-dark);
 }
 
+html.light {
+  color-scheme: white;
+  /* background-color: var(--bg-bg-light);
+  color:var(--color-text-light); */
+}
 
 

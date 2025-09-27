@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <section
       id="accueil"
-      className="min-h-screen w-full mt-20 flex flex-col justify-center items-center text-center bg-gradient-to-br from-gray-900 to-gray-800 px-4 py-12"
+      className="h-full w-full mt-18 flex flex-col justify-center items-center text-center bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 light:from-gray-300 light:via-gray-50 light:to-gray-300 px-4 py-12"
     >
       <div className="max-w-4xl mx-auto">
         {/* Texte principal */}
@@ -63,20 +63,20 @@ export default function Home() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-100 leading-tight mb-6"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold dark:text-gray-100 light:text-gray-900 leading-tight mb-6"
         >
-          <div className="text-gray-300"> Bonjour, je suis <span className="text-teal-400 block">KITCHO Konobialo</span> </div>
-          <span className="text-gray-300">Développeur Web FullStack</span>
+          <div className="dark:text-gray-300 light:text-gray-500"> Bonjour, je suis <span className="dark:text-teal-400 light:text-blue-600 block">KITCHO Konobialo</span> </div>
+          <span className="dark:text-gray-300 light:text-gray-500">Développeur Web FullStack</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+          className="mt-6 text-xl md:text-2xl dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
         >
           Je crée des applications modernes, performantes et adaptées à vos besoins, 
-          avec une <span className="text-teal-400 font-medium">expérience utilisateur optimale</span>.
+          avec une <span className="dark:text-teal-400 light:text-blue-600 font-medium">expérience utilisateur optimale</span>.
         </motion.p>
 
         {/* Boutons */}
@@ -90,7 +90,7 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => { setIsDevisOpen(true); setStatus(""); }}
-            className="px-8 py-3.5 bg-gradient-to-r from-teal-600 to-teal-700 text-gray-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold flex items-center"
+            className="px-8 py-3.5 bg-gradient-to-r dark:from-teal-600 dark:to-teal-700 dark:text-gray-100 light:text-gray-200 light:from-blue-600 light:to-gray-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold flex items-center"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -103,7 +103,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             href="/Kitcho_CV_2025.pdf"
             download
-            className="px-8 py-3.5 bg-gray-800 text-teal-400 border border-gray-700 rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-700 transition-all duration-300 font-semibold flex items-center"
+            className="px-8 py-3.5 dark:bg-gray-800 dark:text-teal-400 light:bg-gray-400 light:text-blue-700 border border-gray-700 rounded-xl shadow-lg hover:shadow-xl dark:hover:bg-gray-700 light:hover:bg-gray-300 transition-all duration-300 font-semibold flex items-center"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -128,10 +128,10 @@ export default function Home() {
             <motion.div 
               key={index}
               whileHover={{ y: -5 }}
-              className="bg-gray-800 p-4 rounded-xl shadow-md border border-gray-700"
+              className="dark:bg-gray-800 light:bg-gray-400 p-4 rounded-xl shadow-md border border-gray-700"
             >
-              <p className="text-2xl font-bold text-teal-400">{stat.value}</p>
-              <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
+              <p className="text-2xl font-bold dark:text-teal-400 light:text-blue-700">{stat.value}</p>
+              <p className="text-sm dark:text-gray-400 light:text-gray-900 font-bold mt-1">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -142,30 +142,30 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4"
+          className="fixed inset-0 dark:bg-black bg-gradient-to-br light:from-gray-300 light:via-gray-50 light:to-gray-300 bg-opacity-80 flex items-center justify-center z-50 px-4"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-gray-700"
+            className="dark:bg-gray-800 light:bg-gray-400 rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-gray-700"
           >
             <button
-              className="absolute top-4 right-4 text-gray-400 hover:text-teal-400 text-2xl transition-colors duration-300"
+              className="absolute top-4 right-4 dark:text-gray-400 light:text-gray-900 dark:hover:text-teal-400 light:hover:text-blue-700 text-2xl transition-colors duration-300"
               onClick={() => setIsDevisOpen(false)}
             >
               ✖
             </button>
             
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-100">Demande de devis</h3>
-              <p className="text-gray-400 mt-2">Remplissez le formulaire et je vous recontacte rapidement</p>
+              <h3 className="text-2xl font-bold dark:text-gray-100 light:text-gray-900 ">Demande de devis</h3>
+              <p className="dark:text-gray-400 light:text-gray-700 font-bold mt-2">Remplissez le formulaire et je vous recontacte rapidement</p>
             </div>
 
             {status === "success" && (
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-4 p-3 bg-teal-900 bg-opacity-30 text-teal-400 rounded-lg font-semibold flex items-center border border-teal-800"
+                className="mb-4 p-3 bg-teal-900 bg-opacity-30 dark:text-teal-400 light:text-blue-700 rounded-lg font-semibold flex items-center border light:border-blue-500 dark:border-teal-800"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -196,7 +196,7 @@ export default function Home() {
                   value={devisData.name}
                   onChange={handleChange}
                   required
-                  className="w-full p-3.5 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 placeholder-gray-500"
+                  className="w-full p-3.5 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500  light:focus:ring-blue-600 focus:border-transparent transition-all duration-300 dark:placeholder-gray-500 light:placeholder-gray-500"
                 />
               </div>
               
@@ -208,7 +208,7 @@ export default function Home() {
                   value={devisData.email}
                   onChange={handleChange}
                   required
-                  className="w-full p-3.5 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 placeholder-gray-500"
+                  className="w-full p-3.5 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500  light:focus:ring-blue-600 focus:border-transparent transition-all duration-300 placeholder-gray-500"
                 />
               </div>
               
@@ -220,7 +220,7 @@ export default function Home() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full p-3.5 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300 placeholder-gray-500"
+                  className="w-full p-3.5 dark:bg-gray-700 light:bg-gray-300 border border-gray-600 dark:text-gray-100 light:text-gray-800 font-bold rounded-lg focus:outline-none focus:ring-2 dark:focus:ring-teal-500  light:focus:ring-blue-600 focus:border-transparent transition-all duration-300 placeholder-gray-500"
                 ></textarea>
               </div>
 
@@ -230,7 +230,7 @@ export default function Home() {
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
                 className={`w-full py-3.5 rounded-lg text-gray-100 font-semibold transition-all duration-300 ${
-                  loading ? "bg-teal-800 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-500"
+                  loading ? "dark:bg-teal-800 light:bg-blue-800 cursor-not-allowed" : "dark:bg-teal-600 dark:hover:bg-teal-500 light:bg-blue-500 light:hover:bg-blue-500"
                 }`}
               >
                 {loading ? (
